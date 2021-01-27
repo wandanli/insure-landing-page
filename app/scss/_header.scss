@@ -1,0 +1,41 @@
+.header {
+  nav {
+    padding: 24px;
+  }
+  &__logo {
+    img {
+      width: 112px;
+      height: 18px;
+    }
+  }
+
+  &__menu {
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &__links {
+    a {
+      font-weight: 700;
+      &:hover {
+        color: $primaryDark;
+      }
+      &:not(:last-child) {
+        margin-right: 26px;
+      }
+    }
+  }
+
+  &__button {
+    margin-left: 34px;
+    border-color: $primaryMain;
+    color: $primaryDark;
+
+    &:hover {
+      background-color: $primaryMain;
+      color: white;
+    }
+  }
+}
