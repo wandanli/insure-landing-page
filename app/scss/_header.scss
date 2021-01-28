@@ -18,9 +18,9 @@
 
   &__links {
     a {
-      font-weight: 700;
+      font-weight: $font-weight-bold;
       &:hover {
-        color: $primaryDark;
+        color: $primary-dark;
       }
       &:not(:last-child) {
         margin-right: 26px;
@@ -30,12 +30,7 @@
 
   &__button {
     margin-left: 34px;
-    border-color: $primaryMain;
-    color: $primaryDark;
-
-    &:hover {
-      background-color: $primaryMain;
-      color: white;
-    }
+    border-color: $primary-main;
+    color: $primary-dark;
   }
 }

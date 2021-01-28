@@ -1,14 +1,22 @@
 // Colors
-$primaryMain: hsl(256, 26%, 20%); /* Dark Violet */
-$secondaryMain: hsl(216, 30%, 68%); /* Grayish Blue */
-$primaryDark: hsl(270, 9%, 17%); /* Very Dark Violet */
-$primaryLight: hsl(273, 4%, 51%); /* Dark Grayish Violet */
-$secondaryLight: hsl(0, 0%, 98%); /* Very Light Gray */
+$primary-main: hsl(256, 26%, 20%); /* Dark Violet */
+$secondary-main: hsl(216, 30%, 68%); /* Grayish Blue */
+$primary-dark: hsl(270, 9%, 17%); /* Very Dark Violet */
+$primary-light: hsl(273, 4%, 51%); /* Dark Grayish Violet */
+$secondary-light: hsl(0, 0%, 98%); /* Very Light Gray */
 
 // Font size
 $font-small: 1.4rem;
 $font-medium: 1.6rem;
 $font-large: 1.8rem;
+
+// Font family
+$font-family-base: "Karla", sans-serif;
+$font-family-header: "DM Serif Display", serif;
+
+// Font weight
+$font-weight-normal: 400;
+$font-weight-bold: 700;
 
 // Wid
 $max-width: 1110px;
