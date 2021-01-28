@@ -41,6 +41,7 @@ button,
 
 .button-hover-dark {
   @extend .button-base;
+  transition: 0.3s;
   &:hover {
     background-color: $primary-main;
     color: white;
@@ -49,6 +50,7 @@ button,
 
 .button-hover-light {
   @extend .button-base;
+  transition: 0.3s;
   &:hover {
     background-color: white;
     color: $primary-main;
@@ -129,4 +131,43 @@ h6 {
 
 .secondary-light {
   color: $secondary-light;
+}
+
+// Media queries (480px, 768px, 1024px)
+
+$breakpoints-up: (
+  "medium": "480px",
+  "large": "768px",
+  "xlarge": "1024px",
+);
+
+@mixin min-width($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+$breakpoints-down: (
+  "small": "479px",
+  "medium": "767px",
+  "large": "1023px",
+);
+
+@mixin max-width($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}
+
+// Visibility
+.hide-for-mobile {
+  @include max-width(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include min-width(large) {
+    display: none;
+  }
 }
