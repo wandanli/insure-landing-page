@@ -25,12 +25,23 @@
   <body>
     <header class="header">
       <nav class="flex flex-jc-sb flex-ai-c">
+        <!-- logo -->
         <a class="header__logo" href="/">
           <img src="/images/logo.svg" alt="insure logo landing page" />
         </a>
-        <a class="hide-for-desktop header__menu" href="#">
-          <img src="/images/icon-hamburger.svg" alt="hamburger menu" />
-        </a>
+        <!-- hamburger menu -->
+        <div
+          id="header-menu-container"
+          class="header__menu-container relative flex flex-ai-c"
+        >
+          <a class="hide-for-desktop header__menu-toggle" href="#">
+            <img src="/images/icon-hamburger.svg" alt="hamburger menu" />
+          </a>
+          <a class="hide-for-desktop header__menu-toggle" href="#">
+            <img src="/images/icon-close.svg" alt="close menu" />
+          </a>
+        </div>
+        <!-- desktop navigation links -->
         <div class="hide-for-mobile flex flex-ai-c">
           <div class="header__links uppercase">
             <a href="">How we work</a>

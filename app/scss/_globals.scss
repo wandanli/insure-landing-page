@@ -41,7 +41,7 @@ button,
 
 .button-hover-dark {
   @extend .button-base;
-  transition: 0.3s;
+  transition: background-color 0.1s ease-in-out;
   &:hover {
     background-color: $primary-main;
     color: white;
@@ -50,7 +50,7 @@ button,
 
 .button-hover-light {
   @extend .button-base;
-  transition: 0.3s;
+  transition: 0.1s;
   &:hover {
     background-color: white;
     color: $primary-main;
@@ -135,26 +135,26 @@ h6 {
 
 // Media queries (480px, 768px, 1024px)
 
-$breakpoints-up: (
+$min-width-breakpoints: (
   "medium": "480px",
   "large": "768px",
   "xlarge": "1024px",
 );
 
 @mixin min-width($size) {
-  @media (min-width: map-get($breakpoints-up, $size)) {
+  @media (min-width: map-get($min-width-breakpoints, $size)) {
     @content;
   }
 }
 
-$breakpoints-down: (
+$max-width-breakpoints: (
   "small": "479px",
   "medium": "767px",
   "large": "1023px",
 );
 
 @mixin max-width($size) {
-  @media (max-width: map-get($breakpoints-down, $size)) {
+  @media (max-width: map-get($max-width-breakpoints, $size)) {
     @content;
   }
 }
@@ -170,4 +170,13 @@ $breakpoints-down: (
   @include min-width(large) {
     display: none;
   }
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+// Position
+.relative {
+  position: relative;
 }

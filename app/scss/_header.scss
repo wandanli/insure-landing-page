@@ -2,6 +2,59 @@
   nav {
     padding: 24px;
   }
+
+  &__menu-container {
+    perspective: 1000;
+    transform-style: preserve-3d;
+    &.rotate {
+      animation: rotate 0.9s forwards;
+    }
+    &.reverse {
+      animation: rotate-reverse 0.9s forwards;
+    }
+    a {
+      &:nth-child(1) {
+        z-index: 2;
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+      }
+      &:nth-child(2) {
+        backface-visibility: hidden;
+        transform: rotateX(180deg);
+      }
+    }
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotateX(0deg);
+    }
+    60% {
+      transform: rotateX(180deg);
+    }
+    80% {
+      transform: rotateX(160deg);
+    }
+    100% {
+      transform: rotateX(180deg);
+    }
+  }
+
+  @keyframes rotate-reverse {
+    0% {
+      transform: rotateX(180deg);
+    }
+    60% {
+      transform: rotateX(0);
+    }
+    80% {
+      transform: rotateX(25deg);
+    }
+    100% {
+      transform: rotateX(0);
+    }
+  }
+
   &__logo {
     img {
       width: 112px;
@@ -9,7 +62,9 @@
     }
   }
 
-  &__menu {
+  &__menu-toggle {
+    position: absolute;
+    right: 0;
     img {
       width: 32px;
       height: 32px;
@@ -19,6 +74,7 @@
   &__links {
     a {
       font-weight: $font-weight-bold;
+      transition: color 0.3s ease-in-out;
       &:hover {
         color: $primary-dark;
       }
