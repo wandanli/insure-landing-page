@@ -44,7 +44,7 @@ button,
   transition: background-color 0.1s ease-in-out;
   &:hover {
     background-color: $primary-main;
-    color: white;
+    color: $secondary-light;
   }
 }
 
@@ -52,7 +52,7 @@ button,
   @extend .button-base;
   transition: 0.1s;
   &:hover {
-    background-color: white;
+    background-color: $secondary-light;
     color: $primary-main;
   }
 }
