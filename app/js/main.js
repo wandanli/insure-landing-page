@@ -1,6 +1,5 @@
 const headerMenuContainer = document.querySelector("#header-menu-container");
 const headerOverlay = document.querySelector("#header-overlay");
-const overlayViewPlans = document.querySelector("#overlay-view-plans");
 
 const switchClassName = (element, className1, className2) => {
   if (element.classList.contains(className1)) {
@@ -24,16 +23,11 @@ headerMenuContainer.addEventListener("click", () => {
   switchClassName(headerMenuContainer, "rotate", "reverse");
   if (headerMenuContainer.classList.contains("rotate")) {
     headerOverlay.style.display = "block";
-    overlayViewPlans.style.display = "block";
     switchClassName(headerOverlay, "slide-down", "slide-up");
+    // switchClassName(headerOverlay, "fade-in", "fade-out");
   } else {
     switchClassName(headerOverlay, "slide-up", "slide-down");
-    setTimeout(() => {
-      overlayViewPlans.style.display = "none";
-    }, 200);
-    setTimeout(() => {
-      headerOverlay.style.display = "none";
-    }, 500);
+    // switchClassName(headerOverlay, "fade-out", "fade-in");
   }
 });
 
