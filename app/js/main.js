@@ -24,10 +24,8 @@ headerMenuContainer.addEventListener("click", () => {
   if (headerMenuContainer.classList.contains("rotate")) {
     headerOverlay.style.display = "block";
     switchClassName(headerOverlay, "slide-down", "slide-up");
-    // switchClassName(headerOverlay, "fade-in", "fade-out");
   } else {
     switchClassName(headerOverlay, "slide-up", "slide-down");
-    // switchClassName(headerOverlay, "fade-out", "fade-in");
   }
 });
 

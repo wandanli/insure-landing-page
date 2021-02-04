@@ -133,6 +133,33 @@ h6 {
   color: $secondary-light;
 }
 
+// Visibility
+.hide-for-mobile {
+  @include max-width(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include min-width(large) {
+    display: none;
+  }
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+// Position
+.relative {
+  position: relative;
+}
+
+//Spacing
+.container {
+  padding: 24px;
+}
+
 // Media queries (480px, 768px, 1024px)
 
 $min-width-breakpoints: (
@@ -157,26 +184,4 @@ $max-width-breakpoints: (
   @media (max-width: map-get($max-width-breakpoints, $size)) {
     @content;
   }
-}
-
-// Visibility
-.hide-for-mobile {
-  @include max-width(medium) {
-    display: none;
-  }
-}
-
-.hide-for-desktop {
-  @include min-width(large) {
-    display: none;
-  }
-}
-
-.inline-block {
-  display: inline-block;
-}
-
-// Position
-.relative {
-  position: relative;
 }
