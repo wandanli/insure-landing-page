@@ -4,6 +4,7 @@
 /* Dark Grayish Violet */
 /* Very Light Gray */
 html {
+  min-height: -webkit-fill-available;
   font-size: 62.5%;
   /* 16px * 62.5% = 10px -> 1rem = 10px */
 }
@@ -19,6 +20,9 @@ html {
 }
 
 body {
+  min-height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
   font-family: "Karla", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
@@ -165,6 +169,10 @@ h6 {
 
 .relative {
   position: relative;
+}
+
+.container {
+  padding: 24px;
 }
 
 @-webkit-keyframes rotate {
@@ -321,10 +329,6 @@ h6 {
   }
 }
 
-.header nav {
-  padding: 24px;
-}
-
 .header__menu-container {
   -webkit-perspective: 1000;
           perspective: 1000;
@@ -375,7 +379,6 @@ h6 {
 .header__overlay {
   display: none;
   position: relative;
-  height: 100vh;
   width: 100vw;
   padding: 0 26px;
   background-color: #2b272f;
@@ -384,7 +387,7 @@ h6 {
 
 .header__overlay.slide-down::after {
   content: "";
-  background-image: url("/images/bg-pattern-mobile-nav.svg");
+  background-image: url("../images/bg-pattern-mobile-nav.svg");
   background-repeat: no-repeat;
   background-position-y: bottom;
   background-size: contain;

@@ -1,4 +1,5 @@
 html {
+  min-height: -webkit-fill-available;
   font-size: 62.5%; /* 16px * 62.5% = 10px -> 1rem = 10px */
 }
 
@@ -12,11 +13,15 @@ html {
 }
 
 body {
+  min-height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
   font-family: $font-family-base;
   font-size: $font-medium;
   font-weight: $font-weight-normal;
   line-height: 1.3;
   color: $primary-light;
+  // overflow: hidden;
 }
 
 a {
@@ -133,6 +138,32 @@ h6 {
   color: $secondary-light;
 }
 
+// Media queries (480px, 768px, 1024px)
+
+$min-width-breakpoints: (
+  "medium": "480px",
+  "large": "768px",
+  "xlarge": "1024px",
+);
+
+@mixin min-width($size) {
+  @media (min-width: map-get($min-width-breakpoints, $size)) {
+    @content;
+  }
+}
+
+$max-width-breakpoints: (
+  "small": "479px",
+  "medium": "767px",
+  "large": "1023px",
+);
+
+@mixin max-width($size) {
+  @media (max-width: map-get($max-width-breakpoints, $size)) {
+    @content;
+  }
+}
+
 // Visibility
 .hide-for-mobile {
   @include max-width(medium) {
@@ -158,30 +189,4 @@ h6 {
 //Spacing
 .container {
   padding: 24px;
-}
-
-// Media queries (480px, 768px, 1024px)
-
-$min-width-breakpoints: (
-  "medium": "480px",
-  "large": "768px",
-  "xlarge": "1024px",
-);
-
-@mixin min-width($size) {
-  @media (min-width: map-get($min-width-breakpoints, $size)) {
-    @content;
-  }
-}
-
-$max-width-breakpoints: (
-  "small": "479px",
-  "medium": "767px",
-  "large": "1023px",
-);
-
-@mixin max-width($size) {
-  @media (max-width: map-get($max-width-breakpoints, $size)) {
-    @content;
-  }
 }

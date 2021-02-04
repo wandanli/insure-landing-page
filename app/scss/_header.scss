@@ -40,7 +40,7 @@
   &__overlay {
     display: none;
     position: relative;
-    height: 100vh;
+    height: cal(100vh-71px);
     width: 100vw;
     padding: 0 26px;
     background-color: $primary-dark;
@@ -48,7 +48,7 @@
 
     &.slide-down::after {
       content: "";
-      background-image: url("/images/bg-pattern-mobile-nav.svg");
+      background-image: url("../images/bg-pattern-mobile-nav.svg");
       background-repeat: no-repeat;
       background-position-y: bottom;
       background-size: contain;
