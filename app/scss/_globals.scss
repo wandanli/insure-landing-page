@@ -13,15 +13,11 @@ html {
 }
 
 body {
-  min-height: 100vh;
-  /* mobile viewport bug fix */
-  min-height: -webkit-fill-available;
   font-family: $font-family-base;
   font-size: $font-medium;
   font-weight: $font-weight-normal;
   line-height: 1.3;
   color: $primary-light;
-  // overflow: hidden;
 }
 
 a {
@@ -41,6 +37,7 @@ button,
   border-style: solid;
   color: inherit;
   font-weight: $font-weight-bold;
+  text-transform: uppercase;
   cursor: pointer;
 }
 
@@ -48,7 +45,7 @@ button,
   @extend .button-base;
   transition: background-color 0.1s ease-in-out;
   &:hover {
-    background-color: $primary-main;
+    background-color: $primary-dark;
     color: $secondary-light;
   }
 }
@@ -58,7 +55,7 @@ button,
   transition: 0.1s;
   &:hover {
     background-color: $secondary-light;
-    color: $primary-main;
+    color: $primary-dark;
   }
 }
 
@@ -73,7 +70,7 @@ h6 {
 }
 
 h1 {
-  font-size: 3.2rem;
+  font-size: 4.1rem;
 }
 
 h2 {
@@ -144,6 +141,7 @@ $min-width-breakpoints: (
   "medium": "480px",
   "large": "768px",
   "xlarge": "1024px",
+  "xxlarge": "1500px",
 );
 
 @mixin min-width($size) {
@@ -188,5 +186,16 @@ $max-width-breakpoints: (
 
 //Spacing
 .container {
+  max-width: calc(1110px + 24px + 24px);
+  min-width: 280px;
+  margin: 0 auto;
   padding: 24px;
+}
+
+.container-px {
+  max-width: calc(1110px + 24px + 24px);
+  min-width: 280px;
+  margin: 0 auto;
+  padding-right: 24px;
+  padding-left: 24px;
 }

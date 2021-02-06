@@ -1,0 +1,116 @@
+.intro {
+  position: relative;
+  color: $secondary-light;
+  background-color: $primary-main;
+
+  @include min-width(large) {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: -53%;
+      left: 0;
+      background-image: url("../images//bg-pattern-intro-left-desktop.svg"),
+        url("../images/bg-pattern-intro-right-desktop.svg");
+      background-repeat: no-repeat;
+      background-size: 12%, 29%;
+      background-position: left bottom, right -58px;
+    }
+  }
+
+  @include max-width(large) {
+    &::after {
+      max-height: 700px;
+    }
+  }
+
+  @include min-width(xxlarge) {
+    &::after {
+      background-size: 170px, 400px;
+    }
+  }
+
+  &__container--desktop {
+    @include min-width(large) {
+      max-width: calc(1110px + 24px + 24px);
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      margin: 0 auto;
+      padding: 100px 24px 120px 24px;
+    }
+  }
+
+  &__image {
+    min-height: 337px;
+    padding-top: 120.27%; /*(img-height / img-width * container-width) */
+    background-image: url("../images/image-intro-mobile.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include min-width(large) {
+      position: relative;
+      flex: 1 1 0;
+      width: 100%;
+      padding-top: 0;
+      background-image: none;
+      background-color: aliceblue;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        padding-bottom: 120.38%;
+        background-image: url("../images/image-intro-desktop.jpg");
+        background-size: cover;
+      }
+    }
+  }
+  &__text {
+    position: relative;
+    padding: 100px 24px 90px 24px;
+    background-image: url("../images/bg-pattern-intro-left-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    text-align: center;
+    > p {
+      padding: 24px 0 34px 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -175px;
+      right: 0;
+      width: 124px;
+      height: 330px;
+      background-image: url("../images/bg-pattern-intro-right-mobile.svg");
+    }
+
+    @include min-width(large) {
+      flex: 1 1 0;
+      background-image: none;
+      text-align: left;
+      padding: 0 24px 0 0;
+
+      &::after {
+        content: none;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        width: 15%;
+        border-top: 1px solid $secondary-light;
+        margin-bottom: 66px;
+      }
+    }
+  }
+
+  a {
+    position: absolute;
+    z-index: 1;
+  }
+}
