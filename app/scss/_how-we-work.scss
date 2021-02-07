@@ -1,0 +1,51 @@
+.how-we-work {
+  padding-bottom: 140px;
+
+  &__container {
+    position: relative;
+    padding-top: 72px;
+    padding-bottom: 72px;
+    background-color: $primary-main;
+    text-align: center;
+    color: $secondary-light;
+
+    @include min-width(large) {
+      display: flex;
+      align-items: center;
+      padding: 78px;
+      text-align: left;
+    }
+
+    > h1 {
+      padding-bottom: 44px;
+      @include min-width(large) {
+        padding-bottom: 0;
+      }
+    }
+
+    > a {
+      @include min-width(large) {
+        position: absolute;
+        right: 78px;
+        z-index: 1;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-image: url("../images/bg-pattern-how-we-work-mobile.svg");
+      background-position: top right;
+      background-size: auto;
+      background-repeat: no-repeat;
+      @include min-width(large) {
+        background-image: url("../images/bg-pattern-how-we-work-desktop.svg");
+        background-size: contain;
+      }
+    }
+  }
+}

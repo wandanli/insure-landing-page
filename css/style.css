@@ -672,3 +672,67 @@ h6 {
     padding-top: 0;
   }
 }
+
+.how-we-work {
+  padding-bottom: 140px;
+}
+
+.how-we-work__container {
+  position: relative;
+  padding-top: 72px;
+  padding-bottom: 72px;
+  background-color: #2d2640;
+  text-align: center;
+  color: #fafafa;
+}
+
+@media (min-width: 768px) {
+  .how-we-work__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 78px;
+    text-align: left;
+  }
+}
+
+.how-we-work__container > h1 {
+  padding-bottom: 44px;
+}
+
+@media (min-width: 768px) {
+  .how-we-work__container > h1 {
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .how-we-work__container > a {
+    position: absolute;
+    right: 78px;
+    z-index: 1;
+  }
+}
+
+.how-we-work__container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: url("../images/bg-pattern-how-we-work-mobile.svg");
+  background-position: top right;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .how-we-work__container::after {
+    background-image: url("../images/bg-pattern-how-we-work-desktop.svg");
+    background-size: contain;
+  }
+}
