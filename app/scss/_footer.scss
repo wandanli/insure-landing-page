@@ -4,13 +4,12 @@
   background-color: $secondary-light;
   background-image: url(../images/bg-pattern-footer-mobile.svg);
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: top left;
 
   @include min-width(large) {
     padding-top: 60px;
     padding-bottom: 60px;
     background-image: url(../images/bg-pattern-footer-desktop.svg);
-    background-position: top left;
   }
 
   &__container {
@@ -26,7 +25,7 @@
       margin-right: 24px;
       margin-left: 24px;
       height: 122px;
-      border-bottom: 1px solid $primary-light;
+      border-bottom: 1px solid #e4e4e4;
       @include min-width(large) {
         height: 60px;
       }
@@ -45,11 +44,15 @@
   }
 
   &__icons {
+    position: relative;
     width: 100%;
     padding-top: 30px;
     padding-bottom: 40px;
-    img:not(:last-child) {
+    a:not(:last-child) {
       padding-right: 16px;
+    }
+    svg:hover path {
+      fill: $primary-dark;
     }
     @include min-width(large) {
       width: auto;

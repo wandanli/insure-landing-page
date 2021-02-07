@@ -31,7 +31,7 @@
     width: 150px;
     margin: auto;
     padding-bottom: 42px;
-    border-top: 1px solid $primary-light;
+    border-top: 1px solid $secondary-main;
     @include min-width(large) {
       margin: 0;
     }
