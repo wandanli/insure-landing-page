@@ -395,6 +395,13 @@ li {
 
 .header__overlay {
   display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
   width: 100vw;
   padding: 0 26px;
@@ -427,6 +434,7 @@ li {
   text-align: center;
   color: #fafafa;
   font-weight: 700;
+  z-index: 2;
 }
 
 .header__overlay a:first-child {

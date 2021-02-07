@@ -24,7 +24,7 @@ headerMenuContainer.addEventListener("click", () => {
   switchClassName(headerMenuContainer, "rotate", "reverse");
   if (headerMenuContainer.classList.contains("rotate")) {
     body.classList.add("noscroll");
-    headerOverlay.style.display = "block";
+    headerOverlay.style.display = "flex";
     switchClassName(headerOverlay, "slide-down", "slide-up");
   } else {
     body.classList.remove("noscroll");

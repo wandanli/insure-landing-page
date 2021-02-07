@@ -39,6 +39,8 @@
 
   &__overlay {
     display: none;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
     width: 100vw;
     padding: 0 26px;
@@ -69,6 +71,7 @@
       text-align: center;
       color: $secondary-light;
       font-weight: $font-weight-bold;
+      z-index: 2;
       &:first-child {
         padding-top: 52px;
       }
