@@ -9,6 +9,10 @@
     text-align: left;
   }
 
+  @include max-width(large) {
+    padding-top: 200px;
+  }
+
   > h1,
   h2 {
     color: $primary-dark;

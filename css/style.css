@@ -101,6 +101,10 @@ h6 {
   font-size: 1.072rem;
 }
 
+li {
+  list-style-type: none;
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -618,6 +622,12 @@ h6 {
   }
 }
 
+@media (max-width: 1023px) {
+  .diff {
+    padding-top: 200px;
+  }
+}
+
 .diff > h1,
 .diff h2 {
   color: #2b272f;
@@ -735,4 +745,114 @@ h6 {
     background-image: url("../images/bg-pattern-how-we-work-desktop.svg");
     background-size: contain;
   }
+}
+
+.footer {
+  padding-top: 88px;
+  padding-bottom: 88px;
+  background-color: #fafafa;
+  background-image: url(../images/bg-pattern-footer-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-image: url(../images/bg-pattern-footer-desktop.svg);
+    background-position: top left;
+  }
+}
+
+.footer__container {
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer__container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin-right: 24px;
+  margin-left: 24px;
+  height: 122px;
+  border-bottom: 1px solid #837d87;
+}
+
+@media (min-width: 768px) {
+  .footer__container::before {
+    height: 60px;
+  }
+}
+
+.footer__wrapper {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer__wrapper {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.footer__icons {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+.footer__icons img:not(:last-child) {
+  padding-right: 16px;
+}
+
+@media (min-width: 768px) {
+  .footer__icons {
+    width: auto;
+    padding-top: 0;
+    padding-bottom: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer__card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 24%;
+            flex: 0 0 24%;
+    text-align: left;
+  }
+}
+
+.footer__card__title {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-transform: uppercase;
+  font-family: "Karla", sans-serif;
+}
+
+.footer__card__links {
+  text-transform: uppercase;
+  color: #2b272f;
+  font-weight: 700;
+}
+
+.footer__card__links li:not(:first-child) {
+  padding-top: 20px;
 }

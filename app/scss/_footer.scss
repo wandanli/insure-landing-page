@@ -1,0 +1,84 @@
+.footer {
+  padding-top: 88px;
+  padding-bottom: 88px;
+  background-color: $secondary-light;
+  background-image: url(../images/bg-pattern-footer-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  @include min-width(large) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-image: url(../images/bg-pattern-footer-desktop.svg);
+    background-position: top left;
+  }
+
+  &__container {
+    position: relative;
+    flex-direction: column;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin-right: 24px;
+      margin-left: 24px;
+      height: 122px;
+      border-bottom: 1px solid $primary-light;
+      @include min-width(large) {
+        height: 60px;
+      }
+    }
+  }
+
+  &__wrapper {
+    text-align: center;
+    @include min-width(large) {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__icons {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    img:not(:last-child) {
+      padding-right: 16px;
+    }
+    @include min-width(large) {
+      width: auto;
+      padding-top: 0;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__card {
+    @include min-width(large) {
+      flex: 0 0 24%;
+      text-align: left;
+    }
+  }
+
+  &__card__title {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-transform: uppercase;
+    font-family: $font-family-base;
+  }
+
+  &__card__links {
+    text-transform: uppercase;
+    color: $primary-dark;
+    font-weight: $font-weight-bold;
+
+    li:not(:first-child) {
+      padding-top: 20px;
+    }
+  }
+}
