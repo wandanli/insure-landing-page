@@ -593,14 +593,82 @@ h6 {
   }
 }
 
-.intro a {
-  position: absolute;
-  z-index: 1;
+.intro__text a {
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .intro__text a {
+    position: absolute;
+    z-index: 1;
+  }
 }
 
 .diff {
-  width: 100%;
-  height: 200px;
-  background-color: white;
-  z-index: -3;
+  padding-top: 140px;
+  padding-bottom: 140px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .diff {
+    padding-top: 304px;
+    padding-bottom: 162px;
+    text-align: left;
+  }
+}
+
+.diff > h1,
+.diff h2 {
+  color: #2b272f;
+}
+
+.diff > h1 {
+  padding: 0 0 20px 0;
+}
+
+@media (min-width: 768px) {
+  .diff > h1 {
+    padding: 0 0 94px 0;
+  }
+}
+
+.diff > h1::before {
+  content: "";
+  display: block;
+  width: 150px;
+  margin: auto;
+  padding-bottom: 42px;
+  border-top: 1px solid #837d87;
+}
+
+@media (min-width: 768px) {
+  .diff > h1::before {
+    margin: 0;
+  }
+}
+
+.diff h2 {
+  padding: 40px 0 26px 0;
+}
+
+.diff .diff_card_container {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.diff .diff_card {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 1;
+          flex: 0 0 1;
+  padding-top: 60px;
+}
+
+@media (min-width: 768px) {
+  .diff .diff_card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 32%;
+            flex: 0 0 32%;
+    padding-top: 0;
+  }
 }

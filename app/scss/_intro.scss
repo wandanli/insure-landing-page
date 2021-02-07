@@ -107,10 +107,12 @@
         margin-bottom: 66px;
       }
     }
-  }
-
-  a {
-    position: absolute;
-    z-index: 1;
+    a {
+      display: inline-block;
+      @include min-width(large) {
+        position: absolute;
+        z-index: 1;
+      }
+    }
   }
 }
