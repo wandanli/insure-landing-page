@@ -688,6 +688,16 @@ li {
 }
 
 .how-we-work__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   padding-top: 72px;
   padding-bottom: 72px;
@@ -698,12 +708,13 @@ li {
 
 @media (min-width: 768px) {
   .how-we-work__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 78px;
     text-align: left;
   }
@@ -719,12 +730,8 @@ li {
   }
 }
 
-@media (min-width: 768px) {
-  .how-we-work__container > a {
-    position: absolute;
-    right: 78px;
-    z-index: 1;
-  }
+.how-we-work__container > a {
+  z-index: 1;
 }
 
 .how-we-work__container::after {
