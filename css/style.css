@@ -27,6 +27,10 @@ body {
   color: #837d87;
 }
 
+body.noscroll {
+  overflow: hidden;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -391,11 +395,12 @@ li {
 
 .header__overlay {
   display: none;
-  position: relative;
+  position: absolute;
   width: 100vw;
   padding: 0 26px;
   background-color: #2b272f;
   overflow: hidden;
+  z-index: 1;
 }
 
 .header__overlay.slide-down::after {

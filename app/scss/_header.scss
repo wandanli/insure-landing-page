@@ -39,11 +39,12 @@
 
   &__overlay {
     display: none;
-    position: relative;
+    position: absolute;
     width: 100vw;
     padding: 0 26px;
     background-color: $primary-dark;
     overflow: hidden;
+    z-index: 1;
 
     &.slide-down::after {
       content: "";

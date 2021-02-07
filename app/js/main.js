@@ -1,5 +1,6 @@
 const headerMenuContainer = document.querySelector("#header-menu-container");
 const headerOverlay = document.querySelector("#header-overlay");
+const body = document.querySelector("body");
 
 const switchClassName = (element, className1, className2) => {
   if (element.classList.contains(className1)) {
@@ -22,9 +23,11 @@ const toggleClassName = (element, className) => {
 headerMenuContainer.addEventListener("click", () => {
   switchClassName(headerMenuContainer, "rotate", "reverse");
   if (headerMenuContainer.classList.contains("rotate")) {
+    body.classList.add("noscroll");
     headerOverlay.style.display = "block";
     switchClassName(headerOverlay, "slide-down", "slide-up");
   } else {
+    body.classList.remove("noscroll");
     switchClassName(headerOverlay, "slide-up", "slide-down");
   }
 });
