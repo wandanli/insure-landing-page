@@ -40,6 +40,7 @@ const scrollFunction = () => {
     header.classList.remove("shadow");
   }
 };
+
 window.onscroll = () => {
   scrollFunction();
 };
