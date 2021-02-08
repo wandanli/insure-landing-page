@@ -6,7 +6,7 @@
 
 # Description
 
-Responsive landing page solution for one of challenges for [frontendmentor.io](https://www.frontendmentor.io)
+Responsive landing page solution for one of challenges for [frontendmentor.io](https://www.frontendmentor.io/challenges)
 
 # Main Features
 
