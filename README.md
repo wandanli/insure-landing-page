@@ -1,6 +1,6 @@
 # Frontend Mentor - Insure Landing Page
 
-**[<p style="text-align: center;">Live Demo 🎉</p>](http://danicali.me/insure-landing-page-202101/)**
+**[Live Demo ](http://danicali.me/insure-landing-page-202101/)**🎉
 ![Preview for the Insure landing page](./design/insure-landing-page-preview.jpg)
 
 # Description
