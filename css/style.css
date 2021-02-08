@@ -315,7 +315,7 @@ li {
     height: 0vh;
   }
   100% {
-    height: 100vh;
+    height: calc(100vh - 71px);
   }
 }
 
@@ -324,7 +324,7 @@ li {
     height: 0vh;
   }
   100% {
-    height: 100vh;
+    height: calc(100vh - 71px);
   }
 }
 
@@ -403,6 +403,7 @@ li {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
+  height: calc(100vh - 71px);
   width: 100vw;
   padding: 0 26px;
   background-color: #2b272f;
