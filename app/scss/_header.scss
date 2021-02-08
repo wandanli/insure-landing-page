@@ -1,4 +1,9 @@
 .header {
+  position: sticky;
+  top: -1px;
+  background-color: $secondary-light;
+  z-index: 2;
+
   &__menu-container {
     perspective: 1000;
     transform-style: preserve-3d;
@@ -23,6 +28,7 @@
 
   &__logo {
     img {
+      display: block;
       width: 112px;
       height: 18px;
     }

@@ -37,6 +37,10 @@ a {
   cursor: pointer;
 }
 
+a > img {
+  display: block;
+}
+
 button,
 .button-base,
 .button-hover-dark,
@@ -346,6 +350,14 @@ li {
   }
 }
 
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+  background-color: #fafafa;
+  z-index: 2;
+}
+
 .header__menu-container {
   -webkit-perspective: 1000;
           perspective: 1000;
@@ -379,6 +391,7 @@ li {
 }
 
 .header__logo img {
+  display: block;
   width: 112px;
   height: 18px;
 }
@@ -783,6 +796,12 @@ li {
     padding-bottom: 60px;
     background-image: url(../images/bg-pattern-footer-desktop.svg);
   }
+}
+
+.footer__logo > img {
+  width: 112px;
+  height: 18px;
+  margin: 0 auto;
 }
 
 .footer__container {

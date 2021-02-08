@@ -12,6 +12,12 @@
     background-image: url(../images/bg-pattern-footer-desktop.svg);
   }
 
+  &__logo > img {
+    width: 112px;
+    height: 18px;
+    margin: 0 auto;
+  }
+
   &__container {
     position: relative;
     flex-direction: column;
