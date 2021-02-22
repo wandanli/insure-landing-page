@@ -1,6 +1,6 @@
 # Insure Landing Page (Frontend Mentor Challenge)
 
-## **[Live Demo](http://danicali.me/insure-landing-page-202101/)** 🎉
+## **[Live Demo](http://danicali.me/insure-landing-page/)** 🎉
 
 ![Preview for the Insure landing page](./design/insure-landing-page-preview.jpg)
 
