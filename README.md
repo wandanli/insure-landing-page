@@ -1,4 +1,4 @@
-# Insure Landing Page (Frontend Mentor)
+# Insure Landing Page (Frontend Mentor Challenge)
 
 ## **[Live Demo](http://danicali.me/insure-landing-page-202101/)** 🎉
 
@@ -6,7 +6,7 @@
 
 # Description
 
-Responsive landing page solution for one of challenges for [frontendmentor.io](https://www.frontendmentor.io/challenges)
+Responsive landing page solution for one of challenges for [frontendmentor.io](https://www.frontendmentor.io/challenges/insure-landing-page-uTU68JV8)
 
 # Main Features
 
