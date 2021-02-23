@@ -805,9 +805,11 @@ li {
 }
 
 .footer__logo > img {
+  position: relative;
   width: 112px;
   height: 18px;
   margin: 0 auto;
+  z-index: 2;
 }
 
 .footer__container {
@@ -877,7 +879,7 @@ li {
   .footer__icons {
     width: auto;
     padding-top: 0;
-    padding-bottom: 30px;
+    padding-bottom: 0;
   }
 }
 
@@ -905,4 +907,8 @@ li {
 
 .footer__card__links li:not(:first-child) {
   padding-top: 20px;
+}
+
+.footer__card__links li > a:hover {
+  text-decoration: underline;
 }
