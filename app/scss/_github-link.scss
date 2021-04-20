@@ -1,0 +1,16 @@
+.github-link {
+  z-index: 3;
+  position: fix;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 44px;
+  background-color: #f5f5f5;
+  a {
+    position: absolute;
+    top: 6px;
+    right: 20px;
+    font-size: 3rem;
+    color: #c2c2c2;
+  }
+}
